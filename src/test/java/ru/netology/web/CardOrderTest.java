@@ -31,6 +31,6 @@ public class CardOrderTest {
         form.$("[data-test-id='phone'] input").setValue("+79991234567");
         form.$("[data-test-id='agreement']").click();
         $$("button").find(exactText("Забронировать")).click();
-        $(byText("Доставка в выбранный город недоступна"));
+        $(byText("Доставка в выбранный город недоступна")).shouldBe(visible);
     }
 }
